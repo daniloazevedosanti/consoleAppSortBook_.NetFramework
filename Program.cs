@@ -84,7 +84,7 @@ namespace ConsoleAppSortBooks
                         break;
 
                     default:
-                        break;
+                        throw new OrdenacaoException("Opcão nula ou inválida");
                 }
 
                 Console.WriteLine("Deseja ver outro modo de ordenação? S/s - Sim e N/n - Não");
