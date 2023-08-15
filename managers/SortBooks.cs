@@ -13,10 +13,15 @@ namespace ConsoleAppSortBooks.managers
         public void printBooksOrder(List<Book> books)
         {
             Console.Write("Livros ");
+            int i = 0;
             foreach (Book item in books)
             {
+                i++;
                 Console.Write(" ");
-                Console.Write(item.Order +",");
+                Console.Write(item.Order);
+
+                if(!(i >= books.Count()))
+                    Console.Write(",");
             }
             Console.ReadLine();
         }
