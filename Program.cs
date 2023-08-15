@@ -22,7 +22,7 @@ namespace ConsoleAppSortBooks
                 string titulo = Console.ReadLine();
                 Console.Write("Autor: ");
                 string autor = Console.ReadLine();
-                Console.Write("Data Lançamento (dd-MM-yyyy): ");
+                Console.Write("Edição (yyyy): ");
                 string dataLancamento = Console.ReadLine();
 
                 Book book = new Book()
@@ -30,7 +30,7 @@ namespace ConsoleAppSortBooks
                     Order = books.Count+1,
                     Title = titulo,
                     Author = autor,
-                    ReleaseDate = DateTime.Parse(dataLancamento)
+                    Edition = dataLancamento
                 };
 
                 books.Add(book);
@@ -50,13 +50,15 @@ namespace ConsoleAppSortBooks
             //    Console.WriteLine(item.ToString());
             //}
             option = false;
+            Console.Clear();
             while (!option)
             {
 
-                Console.WriteLine("Escolha uma opção abaixo para ordenar: ");
-                Console.WriteLine("1 - Título	ascendente  ");
-                Console.WriteLine("2 - Autor ascendente  ");
+                Console.WriteLine("Escolha uma opção abaixo para ordenar (para 2 opções ou mais combine os números ex: 14) : ");
+                Console.WriteLine("1 - Título ascendente  ");
+                Console.WriteLine("2 - Autor ascendente, Título descendente  ");
                 Console.WriteLine("3 - Data de Lançamento ascendente ");
+                Console.WriteLine("4 - Edição descendente, Autor descendente, Título ascendente ");
                 var num = int.Parse(Console.ReadLine());
 
                 switch (num)
@@ -67,13 +69,18 @@ namespace ConsoleAppSortBooks
                         break;
 
                     case 2:
-                        var orderBooksAuthor = managerSort.SortByTitle(books);
+                        var orderBooksAuthor = managerSort.SortByAuthorTitle(books);
                         managerSort.printBooksOrder(orderBooksAuthor);
                         break;
 
                     case 3:
                         var orderBooksDate = managerSort.SortByDate(books);
                         managerSort.printBooksOrder(orderBooksDate);
+                        break;
+
+                    case 4:
+                        var orderBooks = managerSort.SortByEditionAuthorTitle(books);
+                        managerSort.printBooksOrder(orderBooks);
                         break;
 
                     default:
@@ -84,6 +91,10 @@ namespace ConsoleAppSortBooks
                 string op2 = Console.ReadLine();
                 if (op2.ToUpper().Equals("N"))
                     option = true;
+
+                Console.WriteLine(books.Count + " Livro(s) adicionado(s) abaixo.");
+                managerSort.printBooksList(books);
+                Console.Clear();
             }
         }
     }

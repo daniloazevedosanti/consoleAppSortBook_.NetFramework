@@ -47,5 +47,25 @@ namespace ConsoleAppSortBooks.managers
         {
             return books.OrderBy(a => a.Author).ToList();
         }
+
+        public List<Book> SortByAuthorTitle(List<Book> books)
+        {
+            var booksByTitle =
+               (from book in books
+                orderby book.Author ascending, book.Title descending
+                select book).ToList();
+
+            // return books.OrderBy(a => a.Author).OrderByDescending(x => x.Title).ToList();
+            return booksByTitle;
+        }
+
+        public List<Book> SortByEditionAuthorTitle(List<Book> books)
+        {
+            var booksByTitle =
+               (from book in books
+                orderby book.Edition descending, book.Author descending, book.Title ascending
+                select book).ToList();
+            return booksByTitle; //books.OrderByDescending(a => a.Edition).OrderByDescending(x => x.Author).OrderBy(y => y.Title).ToList();
+        }
     }
 }

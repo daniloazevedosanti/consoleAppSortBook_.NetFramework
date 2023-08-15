@@ -12,10 +12,11 @@ namespace ConsoleAppSortBooks.entities
         public string Title { get; set; }
         public string Author { get; set; }
         public DateTime ReleaseDate { get; set; }
+        public string Edition { get; set; }
 
         public override string ToString()
         {
-            return "Titulo: " + Title.ToString() + " Autor: " + Author.ToString() + " Lançamento: " + ReleaseDate.ToString();
+            return "Titulo: " + Title.ToString() + " Autor: " + Author.ToString() + " Edição: " + Edition.ToString();
         }
     }
 }

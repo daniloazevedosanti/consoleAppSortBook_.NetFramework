@@ -10,5 +10,7 @@ namespace ConsoleAppSortBooks.managers
         List<Book> SortByAuthor(List<Book> books);
         void printBooksList(List<Book> books);
         void printBooksOrder(List<Book> books);
+        List<Book> SortByAuthorTitle(List<Book> books);
+        List<Book> SortByEditionAuthorTitle(List<Book> books);
     }
 }
