@@ -27,6 +27,7 @@ namespace ConsoleAppSortBooks
 
                 Book book = new Book()
                 {
+                    Order = books.Count+1,
                     Title = titulo,
                     Author = autor,
                     ReleaseDate = DateTime.Parse(dataLancamento)
@@ -42,7 +43,7 @@ namespace ConsoleAppSortBooks
             }
 
             Console.WriteLine(books.Count + " Livro(s) adicionado(s) abaixo.");
-            var managerSort = new SortBooks();
+            OrdenacaoLivros managerSort = new SortBooks();
             managerSort.printBooksList(books);
             //foreach (Book item in books)
             //{ 
@@ -53,26 +54,26 @@ namespace ConsoleAppSortBooks
             {
 
                 Console.WriteLine("Escolha uma opção abaixo para ordenar: ");
-                Console.WriteLine("1 - Por Titulo  ");
-                Console.WriteLine("2 - Por Autor  ");
-                Console.WriteLine("3 - Por Data de Lançamento  ");
+                Console.WriteLine("1 - Título	ascendente  ");
+                Console.WriteLine("2 - Autor ascendente  ");
+                Console.WriteLine("3 - Data de Lançamento ascendente ");
                 var num = int.Parse(Console.ReadLine());
 
                 switch (num)
                 {
                     case 1:
                         var orderBooksTitle = managerSort.SortByTitle(books);
-                        managerSort.printBooksList(orderBooksTitle);
+                        managerSort.printBooksOrder(orderBooksTitle);
                         break;
 
                     case 2:
                         var orderBooksAuthor = managerSort.SortByTitle(books);
-                        managerSort.printBooksList(orderBooksAuthor);
+                        managerSort.printBooksOrder(orderBooksAuthor);
                         break;
 
                     case 3:
                         var orderBooksDate = managerSort.SortByDate(books);
-                        managerSort.printBooksList(orderBooksDate);
+                        managerSort.printBooksOrder(orderBooksDate);
                         break;
 
                     default:
