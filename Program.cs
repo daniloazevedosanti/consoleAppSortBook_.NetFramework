@@ -23,7 +23,7 @@ namespace ConsoleAppSortBooks
                 Console.Write("Autor: ");
                 string autor = Console.ReadLine();
                 Console.Write("Edição (yyyy): ");
-                string dataLancamento = Console.ReadLine();
+                var dataLancamento = int.Parse(Console.ReadLine());
 
                 Book book = new Book()
                 {
