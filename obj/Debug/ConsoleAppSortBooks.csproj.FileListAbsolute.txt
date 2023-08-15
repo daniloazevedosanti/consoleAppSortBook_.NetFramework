@@ -1,0 +1,7 @@
+C:\Users\lenovo\source\repos\ConsoleAppSortBooks\ConsoleAppSortBooks\bin\Debug\ConsoleAppSortBooks.exe.config
+C:\Users\lenovo\source\repos\ConsoleAppSortBooks\ConsoleAppSortBooks\bin\Debug\ConsoleAppSortBooks.exe
+C:\Users\lenovo\source\repos\ConsoleAppSortBooks\ConsoleAppSortBooks\bin\Debug\ConsoleAppSortBooks.pdb
+C:\Users\lenovo\source\repos\ConsoleAppSortBooks\ConsoleAppSortBooks\obj\Debug\ConsoleAppSortBooks.csproj.AssemblyReference.cache
+C:\Users\lenovo\source\repos\ConsoleAppSortBooks\ConsoleAppSortBooks\obj\Debug\ConsoleAppSortBooks.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\ConsoleAppSortBooks\ConsoleAppSortBooks\obj\Debug\ConsoleAppSortBooks.exe
+C:\Users\lenovo\source\repos\ConsoleAppSortBooks\ConsoleAppSortBooks\obj\Debug\ConsoleAppSortBooks.pdb
